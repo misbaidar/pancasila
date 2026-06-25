@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply m-0 p-0 antialiased bg-slate-100 text-slate-800;
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+
+  /* Glassmorphism Card - Light Theme */
+  .glass-card {
+    @apply bg-white/95 backdrop-blur-md border border-white/80 rounded-2xl shadow-xl shadow-slate-200/50;
+  }
+
+  /* Gradient button base */
+  .btn-gradient {
+    @apply bg-gradient-to-r from-crimson-700 via-crimson-600 to-maroon-700 text-white font-semibold rounded-xl shadow-lg shadow-crimson-700/25 transition-all duration-300 ease-out hover:shadow-xl hover:shadow-crimson-600/35 hover:scale-[1.03] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-crimson-500/40 focus:ring-offset-2 focus:ring-offset-white;
+  }
+
+  /* Option button for quiz */
+  .btn-option {
+    @apply bg-slate-50/70 border border-slate-200/80 text-slate-700 rounded-xl transition-all duration-300 ease-out hover:bg-crimson-50/50 hover:border-crimson-500/30 hover:text-crimson-900 hover:shadow-md hover:scale-[1.01] active:scale-[0.99] focus:outline-none focus:ring-2 focus:ring-crimson-500/20;
+  }
+
+  /* Progress bar gradient */
+  .progress-gradient {
+    background: linear-gradient(90deg, #b51d1d, #ea4444, #d4a017);
+    background-size: 200% 100%;
+    animation: shimmer 2s linear infinite;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
